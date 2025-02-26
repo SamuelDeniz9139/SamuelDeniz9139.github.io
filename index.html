@@ -12,22 +12,28 @@
             <h1 class="name glitch">Samuel Deniz</h1>
             <p class="subtitle">A web designer worth your trust</p>
         </div>
-        <div class="flexBox">
-            <div class="third noImage popUp">
+        <div class="flexBox desktopOnly">
+            <div class="third popUp noImg">
                 <h1 class="subtitle">About Me</h1><br>
                 <p>I am a web designer and developer with a passion for creating functional, eye-catching websites.</p>
                 <button onclick="changePage('about.html')">Learn More</button>
             </div>
-            <div class="third noImage popUp">
+            <div class="third popUp noImg">
                 <h1 class="subtitle">Past Projects</h1><br>
                 <p>View some of my previous work and see what I can bring to the table.</p>
                 <button onclick="changePage('pastwork.html')">View Work</button>
             </div>
-            <div class="third noImage popUp">
+            <div class="third popUp noImg">
                 <h1 class="subtitle">Contact Me</h1><br>
                 <p>If you would like to work with me, please reach me through these contacts.</p>
                 <button onclick="changePage('contact.html')">Learn More</button>
             </div>
+        </div>
+        <div class="popUp mobileOnly noImg">
+            <p>Click on each of the following buttons to learn more about me and my work.</p>
+            <button onclick="changePage('pastwork.html')">Past Projects</button>
+            <button onclick="changePage('about.html')">About Me</button>
+            <button onclick="changePage('contact.html')">My Contacts</button>
         </div>
     </body>
 </html>
