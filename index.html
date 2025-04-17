@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Sam Deniz's Portfolio</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="funx/Styles.css">
         <script src="funx/Scripts.js"></script>
     </head>
@@ -11,28 +12,10 @@
         <h1 class="name glitch">Samuel Deniz</h1>
         <p class="subtitle">A web designer worth your trust</p>
         <div class="subBody">
-            <div class="flexBox desktopOnly">
-                <div class="third popUp noImg">
-                    <h1 class="subtitle">About Me</h1><br>
-                    <p>I am a web designer and developer with a passion for creating functional, eye-catching websites.</p>
-                    <button onclick="changePage('about.html')">Learn More</button>
-                </div>
-                <div class="third popUp noImg">
-                    <h1 class="subtitle">Past Projects</h1><br>
-                    <p>View some of my previous work and see what I can bring to the table.</p>
-                    <button onclick="changePage('pastwork.html')">View Work</button>
-                </div>
-                <div class="third popUp noImg">
-                    <h1 class="subtitle">Contact Me</h1><br>
-                    <p>If you would like to work with me, please reach me through these contacts.</p>
-                    <button onclick="changePage('contact.html')">Learn More</button>
-                </div>
-            </div>
-            <div class="popUp mobileOnly noImg">
-                <p>Click on each of the following buttons to learn more about me and my work.</p>
-                <button onclick="changePage('pastwork.html')">Past Projects</button>
+            <div class="flexBox">
                 <button onclick="changePage('about.html')">About Me</button>
-                <button onclick="changePage('contact.html')">My Contacts</button>
+                <button onclick="changePage('pastwork.html')">Previous Work</button>
+                <button onclick="changePage('contact.html')">Contact Me</button>
             </div>
         </div>
     </body>
