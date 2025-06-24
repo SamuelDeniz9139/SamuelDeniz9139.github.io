@@ -1,4 +1,8 @@
 @font-face {
+  font-family: gcnLite;
+  src: url("AlteHaasGroteskRegular.ttf");
+}
+@font-face {
   font-family: gcn;
   src: url("AlteHaasGroteskBold.ttf");
 }
@@ -11,27 +15,26 @@
 h1{/*the title of each subpage*/
   font-size: 3em;
 }
-h2{
+h2{/*subtitles*/
   font-size: 2em;
 }
-h3{
+h3{/*other highlighted text*/
   font-size: 1.5em;
+}
+p{/*regular text*/
+  font-family: gcnLite;
 }
 body {/*the page itself*/
   margin: 0;
   padding: 0px;
   text-align: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
 }
-button{/*applies to all buttons on the page*/
+button{/*applies to all buttons*/
   border: 0.5px;
   padding: 1em;
-  border-radius: 20px;
+  border-radius: 25px;
   display: inline-block;
-  margin: 1em;
+  margin: 0.5em 1em;
   cursor: pointer;
   background-color: rgba(133,0,255,0.5);
   box-shadow: inset 0.15em 0.15em 0.15em 0 rgba(255,255,255,0.4), inset -0.15em -0.15em 0.15em 0 rgba(0,0,0,0.4);
@@ -60,7 +63,7 @@ button:active{/*when the regular buttons are hovered over*/
   }
 }
 @media only screen and (max-width:800px){/*applies to mobile devices like tablets or phones*/
-  *{
+  *{/*smaller screen, smaller text*/
     font-size: 15px;
   }
   button, .popUp button{/*larger buttons are easier to interact with*/
