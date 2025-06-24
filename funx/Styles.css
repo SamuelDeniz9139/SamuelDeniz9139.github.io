@@ -1,33 +1,20 @@
 @font-face {
-  font-family: standardFont;
-  src: url("Better\ VCR\ 9.0.1.ttf");
-}
-@font-face {
-  font-family: nameFont;
+  font-family: gcn;
   src: url("AlteHaasGroteskBold.ttf");
-}
-@keyframes popIn {/*handles the animation of each pop-up div*/
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 *{/*default for all pages*/
   background-color: black;
-  font-family: standardFont;
-  font-size: 11px;
+  font-family: gcn;
+  font-size: 18px;
   color:whitesmoke;
 }
-.name{/*my name text*/
-  font-size: 6em;
-  font-family: nameFont;
+h1{/*the title of each subpage*/
+  font-size: 3em;
 }
-.title {/*the title of each subpage*/
-  font-size: 4em;
+h2{
+  font-size: 2em;
 }
-.subtitle {/*the titles in each pop-up div*/
+h3{
   font-size: 1.5em;
 }
 body {/*the page itself*/
@@ -39,44 +26,23 @@ body {/*the page itself*/
   background-position: center;
   background-size: cover;
 }
-#backGround{
-  position:fixed;
-  top:0;
-  left:0;
-  z-index: 0;
-}
-.subBody{/*the contents of each page*/
-  margin: auto;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 button{/*applies to all buttons on the page*/
-  border: 1px;
+  border: 0.5px;
   padding: 1em;
   border-radius: 20px;
   display: inline-block;
   margin: 1em;
   cursor: pointer;
-  background-color: rgba(155,0,255,0.6);
-  font-family: nameFont;
-  font-size: 20px;
+  background-color: rgba(133,0,255,0.5);
   box-shadow: inset 0.15em 0.15em 0.15em 0 rgba(255,255,255,0.4), inset -0.15em -0.15em 0.15em 0 rgba(0,0,0,0.4);
-  width: 20%;
+  min-width: 20%;
   transition: 0.25s;
 }
 button:hover{/*when the regular buttons are hovered over*/
-  background-color: rgba(155,0,255,0.8);
+  background-color: rgba(133,0,255,0.75);
 }
 button:active{/*when the regular buttons are hovered over*/
-  background-color: rgba(155,0,255,1);
-}
-.popUp{
-  animation: popIn 1.2s;
-  button{
-    width:70%;
-  }
+  background-color: rgba(133,0,255,1);
 }
 .flexBox{/*when flexboxes are used this comes into play*/
   display: flex;
@@ -89,22 +55,13 @@ button:active{/*when the regular buttons are hovered over*/
   img{/*images take up the whole div and aren't huge*/
     width:100%;
   }
-}
-.third{/*for pop-ups of 3 in a row*/
-  width: 30%;
-}
-.noImg{/*for pop-ups that lack images*/
-  padding:5px 10px;
+  button{
+    min-width:50%;
+  }
 }
 @media only screen and (max-width:800px){/*applies to mobile devices like tablets or phones*/
-  .name{/*shrinks font for mobile*/
-    font-size: 3.5em;
-  }
-  .title{/*shrinks font for mobile*/
-    font-size: 3em;
-  }
-  .subtitle{/*shrinks font for mobile*/
-    font-size: 1.25em;
+  *{
+    font-size: 15px;
   }
   button, .popUp button{/*larger buttons are easier to interact with*/
     min-width: 80%;
@@ -114,7 +71,7 @@ button:active{/*when the regular buttons are hovered over*/
     margin: auto;
     flex-direction: column;
   }
-  .half, .third{/*small popups are larger*/
+  .half{/*small popups are larger*/
     min-width: 100%;
   }
 }
