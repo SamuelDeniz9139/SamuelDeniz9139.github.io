@@ -1,10 +1,10 @@
 @font-face {
   font-family: AlteHaas;
-  src: url("AlteHaasGroteskBold.ttf");
+  src: url("fonts/AlteHaasGroteskBold.ttf");
 }
 @font-face {
   font-family: Rodin;
-  src: url("FOT-Rodin\ Pro\ B.otf");
+  src: url("fonts/FOT-Rodin\ Pro\ B.otf");
 }
 *{/*sitewide settings*/
   margin: 0;
@@ -61,9 +61,9 @@ button:active{/*when buttons are being clicked*/
   }
 }
 .subPage{/*holds content from the subpages, doesn't apply to the main page*/
-  padding: 20px;
+  padding: 20px 50px;
 }
-@media (max-width:600px){
+@media (max-width:600px){/*for mobile devices like cell phones*/
   .banner{
     display: flex;
     flex-direction: column;
@@ -76,5 +76,8 @@ button:active{/*when buttons are being clicked*/
   }
   .subtitle{
     font-size: 25px;
+  }
+  .subPage{
+    padding: 20px;
   }
 }
