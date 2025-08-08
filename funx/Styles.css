@@ -14,9 +14,16 @@
   text-decoration: none;
   text-align: center;
   font-family: Rodin;
-  font-size: 14px;
+  font-size: 15px;
   color: aliceblue;
   background-color: black;
+}
+a{
+  color: rgb(160,70,255);
+}
+a:hover{
+  opacity: 80%;
+  transition: 0.25s;
 }
 .title{/*for page titles*/
   font-family: AlteHaas;
@@ -35,7 +42,7 @@ button{/*formats every button on the site*/
   outline: none;
   padding: 10px 30px;
   font-size: 18px;
-  min-width: 12vw;
+  min-width: 15vw;
   margin: 10px;
   border-radius: 15px;
   transition: 0.25s;
@@ -48,6 +55,16 @@ button:hover{/*when buttons are hovered over*/
 button:active{/*when buttons are being clicked*/
   background-color: rgba(160,70,255,0.1);
   box-shadow: -2px 2px 3px rgba(255,255,255,0.3) inset, 2px -2px 3px rgba(0,0,0,0.3) inset;
+}
+ul{/*affects all ordered lists*/
+  padding: 0% 10%;
+}
+#prices{/*pricing should be easier to see*/
+  padding: 0% 25%;
+}
+li{/*for list items*/
+  list-style-type: square;
+  text-align: left;
 }
 .homePage{/*holds the content on the home page; unlike the other pages this content should be centered*/
   min-height: 100vh;
@@ -62,6 +79,9 @@ button:active{/*when buttons are being clicked*/
 }
 .subPage{/*holds content from the subpages, doesn't apply to the main page*/
   padding: 20px 50px;
+}
+.comInfo{/*for each div on the commission page*/
+  margin: 5vh 0px;
 }
 @media (max-width:600px){/*for mobile devices like cell phones*/
   .banner{
@@ -79,5 +99,8 @@ button:active{/*when buttons are being clicked*/
   }
   .subPage{
     padding: 20px;
+  }
+  ul, #prices{
+    padding: 0% 5%;
   }
 }
