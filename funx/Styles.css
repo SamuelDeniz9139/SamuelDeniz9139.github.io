@@ -20,10 +20,13 @@
 }
 a{
   color: rgb(160,70,255);
+  transition: 0.25s;
 }
 a:hover{
   opacity: 80%;
-  transition: 0.25s;
+}
+a:active{
+  opacity: 60%;
 }
 .title{/*for page titles*/
   font-family: AlteHaas;
@@ -34,6 +37,9 @@ a:hover{
   font-family: AlteHaas;
   font-size: 30px;
   margin: 10px;
+}
+.sect{/*adds margins*/
+  padding: 0% 10%;
 }
 button{/*formats every button on the site*/
   background-color:rgba(160,70,255,0.3);
@@ -56,9 +62,6 @@ button:active{/*when buttons are being clicked*/
   background-color: rgba(160,70,255,0.1);
   box-shadow: -2px 2px 3px rgba(255,255,255,0.3) inset, 2px -2px 3px rgba(0,0,0,0.3) inset;
 }
-ul{/*affects all ordered lists*/
-  padding: 0% 10%;
-}
 #prices{/*pricing should be easier to see*/
   padding: 0% 25%;
 }
@@ -77,12 +80,6 @@ li{/*for list items*/
     display: inline-block;
   }
 }
-.subPage{/*holds content from the subpages, doesn't apply to the main page*/
-  padding: 20px 50px;
-}
-.comInfo{/*for each div on the commission page*/
-  margin: 5vh 0px;
-}
 @media (max-width:600px){/*for mobile devices like cell phones*/
   .banner{
     display: flex;
@@ -100,7 +97,7 @@ li{/*for list items*/
   .subPage{
     padding: 20px;
   }
-  ul, #prices{
-    padding: 0% 5%;
+  .sect, #prices{
+    padding: 0% 10%;
   }
 }
