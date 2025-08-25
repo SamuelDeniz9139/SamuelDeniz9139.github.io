@@ -16,7 +16,6 @@
   font-family: Rodin;
   font-size: 15px;
   color: aliceblue;
-  background-color: black;
 }
 a{
   color: rgb(160,70,255);
@@ -30,7 +29,7 @@ a:active{
 }
 .title{/*for page titles*/
   font-family: AlteHaas;
-  font-size: 70px;
+  font-size: 60px;
   margin: 20px;
 }
 .subtitle{/*for other highlghted text*/
@@ -40,6 +39,8 @@ a:active{
 }
 .sect{/*adds margins*/
   padding: 0% 10%;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 button{/*formats every button on the site*/
   background-color:rgba(160,70,255,0.3);
@@ -63,22 +64,38 @@ button:active{/*when buttons are being clicked*/
   box-shadow: -2px 2px 3px rgba(255,255,255,0.3) inset, 2px -2px 3px rgba(0,0,0,0.3) inset;
 }
 #prices{/*pricing should be easier to see*/
-  padding: 0% 25%;
+  padding: 0% 20%;
 }
 li{/*for list items*/
   list-style-type: square;
   text-align: left;
 }
+.homeBody{/*hides overflow on the main page*/
+  overflow: hidden;
+}
+.subBody{/*makes sure the other backgrounds are black*/
+  background-color: black;
+}
 .homePage{/*holds the content on the home page; unlike the other pages this content should be centered*/
   min-height: 100vh;
   min-height: 100dvh;
   padding: 0;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   button{
     display: inline-block;
   }
+}
+canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: black;
 }
 @media (max-width:600px){/*for mobile devices like cell phones*/
   .banner{
