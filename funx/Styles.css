@@ -17,30 +17,40 @@
   font-size: 15px;
   color: aliceblue;
 }
-a{
+body{/*centers elements on all pages*/
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+a{/*text links*/
   color: rgb(160,70,255);
   transition: 0.25s;
 }
-a:hover{
+a:hover{/*hovering over links*/
   opacity: 80%;
 }
-a:active{
+a:active{/*clicking on links*/
   opacity: 60%;
 }
-.title{/*for page titles*/
+h1,h2,h3{/*for all title text*/
   font-family: AlteHaas;
-  font-size: 60px;
-  margin: 20px;
 }
-.subtitle{/*for other highlghted text*/
-  font-family: AlteHaas;
-  font-size: 30px;
+h1{/*for the main page titles*/
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+h2{/*for the other page titles*/
+  font-size: 60px;
   margin: 10px;
 }
+h3{/*for other highlghted text*/
+  font-size: 40px;
+  margin-bottom: 5px;
+}
 .sect{/*adds margins*/
-  padding: 0% 10%;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+  padding: 0% 5%;
+  margin: auto;
+  margin-top: 20px;
 }
 button{/*formats every button on the site*/
   background-color:rgba(160,70,255,0.3);
@@ -63,20 +73,11 @@ button:active{/*when buttons are being clicked*/
   background-color: rgba(160,70,255,0.1);
   box-shadow: -2px 2px 3px rgba(255,255,255,0.3) inset, 2px -2px 3px rgba(0,0,0,0.3) inset;
 }
-#prices{/*pricing should be easier to see*/
-  padding: 0% 20%;
-}
 li{/*for list items*/
   list-style-type: square;
   text-align: left;
 }
-.homeBody{/*hides overflow on the main page*/
-  overflow: hidden;
-}
-.subBody{/*makes sure the other backgrounds are black*/
-  background-color: black;
-}
-.homePage{/*holds the content on the home page; unlike the other pages this content should be centered*/
+.homePage, .subContent{/*centers the main content and puts it over the background animation*/
   min-height: 100vh;
   min-height: 100dvh;
   padding: 0;
@@ -88,33 +89,24 @@ li{/*for list items*/
     display: inline-block;
   }
 }
-canvas{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: black;
+.subContent{/*holds the content of side pages*/
+  padding: 0% 10%;
+  flex-direction: column;
 }
 @media (max-width:600px){/*for mobile devices like cell phones*/
-  .banner{
-    display: flex;
-    flex-direction: column;
-  }
   button{
-    min-width: 50vw;
+    min-width: 60vw;
   }
-  .title{
+  h1{
     font-size: 50px;
   }
-  .subtitle{
-    font-size: 25px;
+  h2{
+    font-size: 40px;
   }
-  .subPage{
-    padding: 20px;
+  h3{
+    font-size: 30px;
   }
-  .sect, #prices{
-    padding: 0% 10%;
+  .subContent{
+    padding: 15px;
   }
 }
