@@ -14,8 +14,15 @@
   text-decoration: none;
   text-align: center;
   font-family: Rodin;
-  font-size: 15px;
+  font-size: 18px;
   color: aliceblue;
+}
+@keyframes floatie{/*meant to mimic the GameCube's menu when there's no disc*/
+  0%{transform: rotate(0deg); left:0px; top:0px;}
+  25%{transform: rotate(1deg); left:5px; top:-5px;}
+  50%{transform: rotate(0deg); left:0px; top:-2.5px;}
+  75%{transform: rotate(-1deg); left:-5px; top:-5px;}
+  100%{transform: rotate(0deg); left:0px; top:0px;}
 }
 body{/*centers elements on all pages*/
   background-color: black;
@@ -36,7 +43,7 @@ h1,h2,h3{/*for all title text*/
   font-family: AlteHaas;
 }
 h1{/*for the main page titles*/
-  font-size: 70px;
+  font-size: 80px;
   margin-bottom: 20px;
 }
 h2{/*for the other page titles*/
@@ -89,22 +96,37 @@ li{/*for list items*/
     display: inline-block;
   }
 }
+.floaty{
+  position: relative;
+  animation: floatie 4s infinite;
+  animation-timing-function: linear;
+}
 .subContent{/*holds the content of side pages*/
   padding: 0% 10%;
   flex-direction: column;
 }
 @media (max-width:600px){/*for mobile devices like cell phones*/
+  @keyframes floatie{/*reduces the exaggeration of tilting on mobile due to smaller screen size*/
+    0%{transform: rotate(0deg); left:0px; top:0px;}
+    25%{transform: rotate(0.2deg); left:5px; top:-5px;}
+    50%{transform: rotate(0deg); left:0px; top:-2.5px;}
+    75%{transform: rotate(-0.2deg); left:-5px; top:-5px;}
+    100%{transform: rotate(0deg); left:0px; top:0px;}
+  }
   button{
     min-width: 60vw;
+  }
+  *{
+    font-size: 15px;
   }
   h1{
     font-size: 50px;
   }
   h2{
-    font-size: 40px;
+    font-size: 35px;
   }
   h3{
-    font-size: 30px;
+    font-size: 25px;
   }
   .subContent{
     padding: 15px;
