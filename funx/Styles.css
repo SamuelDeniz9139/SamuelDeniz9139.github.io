@@ -96,10 +96,13 @@ li{/*for list items*/
     display: inline-block;
   }
 }
-.floaty{
+.floaty{/*adds the animation to the divs*/
   position: relative;
   animation: floatie 4s infinite;
   animation-timing-function: linear;
+}
+.delayed{
+  animation-delay: 2s;
 }
 .subContent{/*holds the content of side pages*/
   padding: 0% 10%;
