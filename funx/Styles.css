@@ -24,6 +24,10 @@
   75%{transform: rotate(-1deg); left:-5px; top:-5px;}
   100%{transform: rotate(0deg); left:0px; top:0px;}
 }
+canvas {/*for the animated backgrounds*/
+  display: block;
+  position: fixed;
+}
 body{/*centers elements on all pages*/
   background-color: black;
   align-items: center;
@@ -60,7 +64,7 @@ h3{/*for other highlghted text*/
   margin-top: 20px;
 }
 button{/*formats every button on the site*/
-  background-color:rgba(160,70,255,0.3);
+  background-color:rgba(160,70,255,0.5);
   box-shadow: -2px 2px 3px rgba(255,255,255,0.5) inset, 2px -2px 3px rgba(0,0,0,0.5) inset;
   border: none;
   outline: none;
@@ -73,7 +77,7 @@ button{/*formats every button on the site*/
   cursor: pointer;
 }
 button:hover{/*when buttons are hovered over*/
-  background-color: rgba(160,70,255,0.2);
+  background-color: rgba(160,70,255,0.3);
   box-shadow: -2px 2px 3px rgba(255,255,255,0.4) inset, 2px -2px 3px rgba(0,0,0,0.4) inset;
 }
 button:active{/*when buttons are being clicked*/
@@ -102,7 +106,7 @@ li{/*for list items*/
   animation-timing-function: linear;
 }
 .delayed{
-  animation-delay: 2s;
+  animation-delay: -1.5s;
 }
 .subContent{/*holds the content of side pages*/
   padding: 0% 10%;
