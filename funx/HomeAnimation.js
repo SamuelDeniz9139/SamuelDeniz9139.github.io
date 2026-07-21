@@ -16,32 +16,37 @@ function drawLines() {
     const cenX = tnl.width / 2;
     const cenY = tnl.height / 2;
     ctx.strokeStyle = "rgba(100,255,225,0.2)";
-    ctx.lineWidth = 3;
-    ctx.beginPath();
-    if(tnl.width - tnl.height <= -250){//middle line is vertical on mobile devices
-        ctx.moveTo(0, cenY);
-        ctx.lineTo(cenX*2,cenY);
-    } else if (tnl.width > tnl.height + 250) {//middle line is horizontal on desktops
-        ctx.moveTo(cenX,0);
-        ctx.lineTo(cenX,cenY*2);
+    ctx.lineWidth = 4;
+    if(tnl.width!=tnl.height){//does not generate these if width=height
+        makeLine(0,cenY,tnl.width,cenY);
+        makeLine(cenX,0,cenX,tnl.height);
+        makeLine(0,0,tnl.width,tnl.height);
+        makeLine(0,tnl.height,tnl.width,0);
     }
-    ctx.stroke();
-    for (let q=0; q<4; q++){//left and right sides, X values are the same across all Q
-        ctx.beginPath();
-        ctx.moveTo(0,(tnl.height*q)/3);
-        ctx.lineTo(tnl.width,(tnl.height*(3-q))/3);
-        ctx.stroke();
-    }
-    for(let u=1;u<3;u++){//top and bottom
-        ctx.beginPath();
-        ctx.moveTo((tnl.width*u)/3,0);
-        ctx.lineTo((tnl.width*(3-u))/3,tnl.height);
-        ctx.stroke();
+    if(tnl.width>tnl.height){
+        for(let thicc=1;thicc<3;thicc++){//top and bottom; same Y values across thicc
+            makeLine((tnl.width*thicc)/3,0,(tnl.width*(3-thicc))/3,tnl.height);
+        }
+    } else if(tnl.width<tnl.height) {
+        for (let thinn=1; thinn<3; thinn++){//left and right sides, same X values across thinn
+            makeLine(0,(tnl.height*thinn)/3,tnl.width,(tnl.height*(3-thinn))/3);
+        }
+    } else {
+        for (let squ=1; squ<4; squ++){//left and right sides, same X values across Q
+            makeLine(0,(tnl.height*squ)/4,tnl.width,(tnl.height*(4-squ))/4);
+            makeLine((tnl.width*squ)/4,0,(tnl.width*(4-squ))/4,tnl.height);
+        }
     }
     ctx.beginPath();
     ctx.arc(cenX, cenY, 35, 0, Math.PI * 2);
     ctx.strokeStyle = "rgb(0,0,0)";
     ctx.fill();
+}
+function makeLine(x0,y0,x1,y1) {
+    ctx.beginPath();
+    ctx.moveTo(x0,y0);
+    ctx.lineTo(x1,y1);
+    ctx.stroke();
 }
 function drawTunnel() {
     ctx.clearRect(0, 0, tnl.width, tnl.height);
@@ -56,7 +61,7 @@ function drawTunnel() {
         ctx.strokeStyle = ring.color;
         ctx.lineWidth = 2 * perspective;
         ctx.stroke();
-        ring.z -= 0.5; //0.5 is the speed
+        ring.z -= 0.8; //0.8 is the speed
         if (ring.z <= 0) {
             ring.z = 2000;
             ring.color = 'rgba(100, 255, 225, 0.2)';
