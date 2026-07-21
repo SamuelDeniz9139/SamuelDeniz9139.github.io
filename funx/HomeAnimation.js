@@ -1,6 +1,3 @@
-function changePage(site){//sends you to another page on or off the site
-    window.location.href=site;
-} //source for following code: https://codepen.io/roniee_1993/pen/dPYZrNL
 const tnl = document.getElementById("tunnel");
 const ctx = tnl.getContext("2d");
 tnl.width = window.innerWidth;
@@ -15,7 +12,7 @@ function initRings() {
         });
     }
 }
-function drawLines(){
+function drawLines() {
     const cenX = tnl.width / 2;
     const cenY = tnl.height / 2;
     ctx.strokeStyle = "rgba(100,255,225,0.2)";
