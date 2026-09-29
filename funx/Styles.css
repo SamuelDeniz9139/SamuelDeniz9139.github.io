@@ -10,7 +10,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
   text-decoration: none;
   text-align: center;
   font-family: Rodin;
@@ -27,6 +26,7 @@
 canvas {/*for the animated backgrounds*/
   display: block;
   position: fixed;
+  z-index: -100;
 }
 body{/*centers elements on all pages*/
   background-color: black;
@@ -38,21 +38,20 @@ a{/*text links*/
   transition: 0.25s;
 }
 a:hover{/*hovering over links*/
-  opacity: 80%;
+  opacity: 90%;
 }
 a:active{/*clicking on links*/
-  opacity: 60%;
+  opacity: 70%;
 }
 h1,h2,h3{/*for all title text*/
   font-family: AlteHaas;
 }
 h1{/*for the main page titles*/
-  font-size: 80px;
+  font-size: 70px;
   margin-bottom: 20px;
 }
-h2{/*for the other page titles*/
-  font-size: 60px;
-  margin: 10px;
+h2{/*for the subpage titles*/
+  font-size: 50px;
 }
 h3{/*for other highlghted text*/
   font-size: 40px;
@@ -85,13 +84,10 @@ button:active{/*when buttons are being clicked*/
   box-shadow: -2px 2px 3px rgba(255,255,255,0.3) inset, 2px -2px 3px rgba(0,0,0,0.3) inset;
 }
 li{/*for list items*/
-  list-style-type: square;
   text-align: left;
 }
 .homePage, .subContent{/*centers the main content and puts it over the background animation*/
-  min-height: 100vh;
   min-height: 100dvh;
-  padding: 0;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -102,7 +98,7 @@ li{/*for list items*/
 }
 .floaty{/*adds the animation to the divs*/
   position: relative;
-  animation: floatie 4s infinite;
+  animation: floatie 5s infinite;
   animation-timing-function: linear;
 }
 .delayed{
