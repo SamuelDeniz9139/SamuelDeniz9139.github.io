@@ -16,23 +16,6 @@
   font-size: 18px;
   color: aliceblue;
 }
-@keyframes floatie{/*meant to mimic the GameCube's menu when there's no disc*/
-  0%{transform: rotate(0deg); left:0px; top:0px;}
-  25%{transform: rotate(1deg); left:4px; top:-4px;}
-  50%{transform: rotate(0deg); left:0px; top:0px;}
-  75%{transform: rotate(-1deg); left:-4px; top:-4px;}
-  100%{transform: rotate(0deg); left:0px; top:0px;}
-}
-canvas {/*for the animated backgrounds*/
-  display: block;
-  position: fixed;
-  z-index: -100;
-}
-body{/*centers elements on all pages*/
-  background-color: black;
-  align-items: center;
-  justify-content: center;
-}
 a{/*text links*/
   color: rgb(160,70,255);
   transition: 0.25s;
@@ -57,10 +40,35 @@ h3{/*for other highlghted text*/
   font-size: 40px;
   margin-bottom: 5px;
 }
-.sect{/*adds margins*/
+li{/*for list items*/
+  text-align: left;
+}
+body{/*centers elements on all pages*/
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+main{/*centers the main content and puts it over the background animation*/
+  min-height: 100dvh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 10%;
+  flex-direction: column;
+  button{
+    display: inline-block;
+  }
+}
+.sect{/*adds margins to small sections in subpages*/
   padding: 0% 5%;
   margin: auto;
   margin-top: 20px;
+}
+canvas {/*for the animated backgrounds*/
+  display: block;
+  position: fixed;
+  z-index: -100;
 }
 button{/*formats every button on the site*/
   background-color:rgba(160,70,255,0.5);
@@ -83,18 +91,12 @@ button:active{/*when buttons are being clicked*/
   background-color: rgba(160,70,255,0.1);
   box-shadow: -2px 2px 3px rgba(255,255,255,0.3) inset, 2px -2px 3px rgba(0,0,0,0.3) inset;
 }
-li{/*for list items*/
-  text-align: left;
-}
-.homePage, .subContent{/*centers the main content and puts it over the background animation*/
-  min-height: 100dvh;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  button{
-    display: inline-block;
-  }
+@keyframes floatie{/*meant to mimic the GameCube's menu when there's no disc*/
+  0%{transform: rotate(0deg); left:0px; top:0px;}
+  25%{transform: rotate(1deg); left:4px; top:-4px;}
+  50%{transform: rotate(0deg); left:0px; top:0px;}
+  75%{transform: rotate(-1deg); left:-4px; top:-4px;}
+  100%{transform: rotate(0deg); left:0px; top:0px;}
 }
 .floaty{/*adds the animation to the divs*/
   position: relative;
@@ -103,10 +105,6 @@ li{/*for list items*/
 }
 .delayed{
   animation-delay: -1.5s;
-}
-.subContent{/*holds the content of side pages*/
-  padding: 0% 10%;
-  flex-direction: column;
 }
 @media (max-width:600px){/*for mobile devices like cell phones*/
   @keyframes floatie{/*reduces the exaggeration of tilting on mobile due to smaller screen size*/
