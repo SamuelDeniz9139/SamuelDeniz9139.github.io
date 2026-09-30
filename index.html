@@ -9,16 +9,28 @@
         <script src="funx/HomeAnimation.js" defer></script>
     </head>
     <body>
-        <main>
-            <canvas id="tunnel"></canvas>
-            <div class="floaty" id="homeMenu">
-                <h1>Sam Deniz</h1>
-                <h3>Web Designer</h3><br>
-                <button onclick="changePage('commissions/')">Commissions</button>
-                <button onclick="changePage('pastwork/')">Past Work</button><br>
-                <button onclick="changePage('about/')">About Me</button>
-                <button onclick="changePage('contact/')">Contact</button>
+        <canvas id="tunnel"></canvas>
+        <div id="homePage">
+            <div id="navBar">
+                <div>
+                    <a onclick="displayDropdown()">Menu</a>
+                    <div id="dropDownMenu">
+                        <a onclick="changePage('about/')">About Me</a>
+                        <a onclick="changePage('pastwork/')">Past Work</a>
+                        <a onclick="changePage('commissions/')">Commissions</a>
+                        <a onclick="changePage('contact/')">Contact</a>
+                    </div>
+                </div>
             </div>
-        </main>
+            <main>
+                <div class="floaty">
+                    <h1>Sam Deniz</h1>
+                    <h3>Web Designer</h3><br>
+                </div>
+                <div class="floaty delayed">
+                    <img id="homeImage" class="fade" src="/assets/Work Screenshots/RRCAHT_ss.png" alt="Work">
+                </div>
+            </main>
+        </div>
     </body>
 </html>

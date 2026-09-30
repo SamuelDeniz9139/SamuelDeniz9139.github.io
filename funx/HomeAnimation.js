@@ -1,3 +1,12 @@
+var imageSources = ["/assets/Work Screenshots/AHOA_ss.png","/assets/Work Screenshots/COC_ss.png","/assets/Work Screenshots/JCAR_ss.png","/assets/Work Screenshots/RRCAHT_ss.png"]
+var index = 0;
+setInterval(function(){
+    if (index === imageSources.length) {
+        index = 0;
+    }
+    document.getElementById("homeImage").src = imageSources[index];
+    index++;
+}, 6000);
 const tnl = document.getElementById("tunnel");
 const ctx = tnl.getContext("2d");
 tnl.width = window.innerWidth;
