@@ -43,7 +43,7 @@ h3{/*for other highlghted text*/
 li{/*for list items*/
   text-align: left;
 }
-#navBar{
+#navBar{/*for the menu on the home page*/
   overflow: hidden;
   position: absolute;
   padding: 10px;
@@ -62,8 +62,16 @@ li{/*for list items*/
       min-width: 25dvw;
     }
   }
+  a:hover{/*when buttons are hovered over*/
+    background-color: rgba(160,70,255,0.3);
+    box-shadow: -2px 2px 3px rgba(255,255,255,0.4) inset, 2px -2px 3px rgba(0,0,0,0.4) inset;
+  }
+  a:active{/*when buttons are being clicked*/
+    background-color: rgba(160,70,255,0.1);
+    box-shadow: -2px 2px 3px rgba(255,255,255,0.3) inset, 2px -2px 3px rgba(0,0,0,0.3) inset;
+  }
 }
-#dropDownMenu{
+#dropDownMenu{/*for the dropdown menu*/
   display: none;
   flex-direction: column;
   z-index: 1;
@@ -116,9 +124,12 @@ button:active{/*when buttons are being clicked*/
   background-color: rgba(160,70,255,0.1);
   box-shadow: -2px 2px 3px rgba(255,255,255,0.3) inset, 2px -2px 3px rgba(0,0,0,0.3) inset;
 }
-#homeImage{
-  max-width: 50%;
-  max-height: 50%;
+#homeImage{/*the image on the home page*/
+  max-width: 60%;
+  max-height: 60%;
+  animation: fade 6s infinite;
+  animation-timing-function: linear;
+  border-radius: 15px;
   @media (max-width:600px){/*for mobile devices like cell phones*/
     max-width: 90%;
     max-height: 90%;
@@ -127,14 +138,10 @@ button:active{/*when buttons are being clicked*/
 @keyframes fade {
   0% {opacity: 0;}
   10% {opacity: 0;}
-  25% {opacity: 1;}
-  75% {opacity: 1;}
+  25% {opacity: 0.9;}
+  75% {opacity: 0.9;}
   90% {opacity: 0;}
   100% {opacity: 0;}
-}
-.fade {/* Fading animation */
-  animation: fade 6s infinite;
-  animation-timing-function: linear;
 }
 @keyframes floatie{/*meant to mimic the GameCube's menu when there's no disc*/
   0%{transform: rotate(0deg); left:0px; top:0px;}
@@ -155,7 +162,7 @@ button:active{/*when buttons are being clicked*/
   @keyframes floatie{/*reduces the exaggeration of tilting on mobile due to smaller screen size*/
     0%{transform: rotate(0deg); left:0px; top:0px;}
     25%{transform: rotate(0.1deg); left:3px; top:-3px;}
-    50%{transform: rotate(0deg); left:0px; top:-1.5px;}
+    50%{transform: rotate(0deg); left:0px; top:-3px;}
     75%{transform: rotate(-0.1deg); left:-3px; top:-3px;}
     100%{transform: rotate(0deg); left:0px; top:0px;}
   }
